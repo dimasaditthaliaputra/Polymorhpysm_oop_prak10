@@ -1,8 +1,8 @@
 package Praktikum10;
 
-public class Dosen extends Pegawai {
+public class Dosen extends Pegawai implements Comparable<Dosen> {
     public String nidn;
-    
+
     public Dosen() {
 
     }
@@ -22,5 +22,10 @@ public class Dosen extends Pegawai {
         System.out.println("Menyusun materi");
         System.out.println("Melaksanakan PBM");
         System.out.println("Melakukan evaluasi");
+    }
+
+    @Override
+    public int compareTo(Dosen otherDosen) {
+        return this.nip.compareTo(otherDosen.nip);
     }
 }
